@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Masuk | Jemputin</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="login">
+  <main class="app no-nav">
+    <header class="top center tall">
+      <div class="logo">J</div>
+      <h1 class="brand">JEMPUTIN</h1>
+      <p>Tinggal Pesan, Kami Jemput.</p>
+    </header>
+
+    <form class="card up" id="loginForm" novalidate style="padding:20px">
+      <b style="font-size:16px;display:block;margin-bottom:12px">Masuk</b>
+      <div class="alert" id="alertBox" hidden></div>
+      <div class="f">
+        <label for="email">EMAIL</label>
+        <input id="email" type="email" autocomplete="username" placeholder="nama@email.com">
+      </div>
+      <div class="f">
+        <label for="password">KATA SANDI</label>
+        <input id="password" type="password" autocomplete="current-password" placeholder="Kata sandi">
+      </div>
+      <button type="submit" class="btn in">Masuk</button>
+      <p class="sub center mt">Belum punya akun? <a href="register.html" style="color:var(--b);font-weight:700">Daftar</a></p>
+    </form>
+
+    <!-- Akun demo: peran ditentukan otomatis dari data akun, bukan dipilih di form -->
+    <div class="demo-box">
+      <b>Akun demo (klik untuk mengisi):</b><br>
+      <a href="#" class="fill" data-email="willy@jemputin.com" data-pw="user123" style="color:var(--b)">Pelanggan</a> &middot; willy@jemputin.com / user123<br>
+      <a href="#" class="fill" data-email="budi@jemputin.com" data-pw="driver123" style="color:var(--b)">Pengemudi (motor)</a> &middot; budi@jemputin.com / driver123<br>
+      <a href="#" class="fill" data-email="andi@jemputin.com" data-pw="driver123" style="color:var(--b)">Pengemudi (mobil)</a> &middot; andi@jemputin.com / driver123<br>
+      <a href="#" class="fill" data-email="admin@jemputin.com" data-pw="admin123" style="color:var(--b)">Admin</a> &middot; admin@jemputin.com / admin123
+    </div>
+    <p class="sub center pad mt">Prototipe frontend &middot; data demo disimpan di localStorage</p>
+  </main>
+  <script src="js/script.js" defer></script>
+  <script>
+    // mencegah tautan demo berpindah halaman
+    document.addEventListener('click', function (e) {
+      if (e.target.classList.contains('fill')) e.preventDefault();
+    });
+  </script>
+</body>
+</html>

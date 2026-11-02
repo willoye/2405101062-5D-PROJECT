@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tentukan Lokasi | Jemputin</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="lokasi">
+  <main class="app">
+    <div class="top-bar">
+      <a class="back" href="index.html" aria-label="Kembali">&larr;</a>
+      <h1>Tentukan Lokasi</h1>
+    </div>
+
+    <section class="card" style="margin-top:14px">
+      <div class="row">
+        <span class="dot"></span>
+        <input class="field" id="pickupInput" placeholder="Lokasi jemput" autocomplete="off">
+      </div>
+      <div class="gap"></div>
+      <div class="row">
+        <span class="dot r"></span>
+        <input class="field" id="destInput" placeholder="Mau ke mana?" autocomplete="off">
+      </div>
+    </section>
+
+    <!-- Peta Leaflet + OpenStreetMap (otomatis pindah ke tampilan cadangan jika gagal dimuat) -->
+    <div class="map md" id="map"></div>
+
+    <div class="h">Pilihan Alamat</div>
+    <section class="card" id="placeList"></section>
+
+    <div class="alert err" id="err" hidden></div>
+    <button type="button" class="btn" id="nextBtn">Lanjut Pilih Layanan</button>
+
+    <nav class="nav" id="nav"></nav>
+  </main>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+  <script src="js/script.js" defer></script>
+</body>
+</html>

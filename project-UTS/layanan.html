@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pilih Layanan | Jemputin</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="layanan">
+  <main class="app">
+    <div class="top-bar">
+      <a class="back" href="lokasi.html" aria-label="Kembali">&larr;</a>
+      <h1>Pilih Layanan</h1>
+    </div>
+
+    <div class="map md" id="map" style="margin-top:14px"></div>
+    <section class="card" id="routeInfo"></section>
+
+    <div class="h">Layanan</div>
+    <section class="card" id="svcList"></section>
+
+    <div class="f">
+      <label for="jadwalSel">JADWAL</label>
+      <select id="jadwalSel">
+        <option value="sekarang">Sekarang</option>
+        <option value="nanti">Jadwalkan nanti</option>
+      </select>
+    </div>
+    <div class="f" id="jadwalWrap" hidden>
+      <label for="jadwalTime">WAKTU PENJEMPUTAN</label>
+      <input type="datetime-local" id="jadwalTime">
+    </div>
+
+    <div class="h">Metode Pembayaran</div>
+    <section class="card" id="payList"></section>
+
+    <label class="check"><input type="checkbox" id="simFail"> Simulasikan pesanan gagal (untuk demo)</label>
+    <p class="sub pad" style="margin-bottom:10px">Tarif adalah estimasi simulasi.</p>
+    <button type="button" class="btn" id="orderBtn">Pesan</button>
+
+    <nav class="nav" id="nav"></nav>
+  </main>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+  <script src="js/script.js" defer></script>
+</body>
+</html>

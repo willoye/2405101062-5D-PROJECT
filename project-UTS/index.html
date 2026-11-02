@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beranda | Jemputin</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="index">
+  <main class="app">
+    <header class="top">
+      <p>Selamat datang,</p>
+      <h1 id="hello">...</h1>
+      <p>Tinggal Pesan, Kami Jemput.</p>
+    </header>
+
+    <!-- Lokasi jemput dan tujuan -->
+    <section class="card up">
+      <a class="row" href="lokasi.html">
+        <span class="dot"></span>
+        <div class="inp"><b id="pickupText"></b></div>
+      </a>
+      <div class="gap"></div>
+      <a class="row" href="lokasi.html">
+        <span class="dot r"></span>
+        <div class="inp"><span id="destText">Mau ke mana hari ini?</span></div>
+      </a>
+    </section>
+
+    <div id="activeBanner"></div>
+
+    <!-- Pilihan layanan -->
+    <section class="card">
+      <div class="svc">
+        <button type="button" class="svc-opt" data-svc="motor">
+          <div class="big">&#9650;</div><b>Motor</b><div class="sub">Cepat &amp; hemat</div>
+        </button>
+        <button type="button" class="svc-opt" data-svc="mobil">
+          <div class="big">&#9632;</div><b>Mobil</b><div class="sub">Nyaman, 4 kursi</div>
+        </button>
+      </div>
+      <a class="btn in" href="lokasi.html">Pesan Sekarang</a>
+    </section>
+
+    <!-- Promo -->
+    <div class="promo" id="promo">
+      <b>Diskon 30% Perjalanan Pertama</b>
+      Kode: JEMPUT30 &middot; berlaku s.d. 31 Des
+    </div>
+
+    <!-- Riwayat singkat -->
+    <div class="h">Riwayat Singkat</div>
+    <section class="card" id="recent"></section>
+    <p class="sub center pad">Prototipe frontend. Data demo disimpan di localStorage.</p>
+
+    <nav class="nav" id="nav"></nav>
+  </main>
+  <script src="js/script.js" defer></script>
+</body>
+</html>

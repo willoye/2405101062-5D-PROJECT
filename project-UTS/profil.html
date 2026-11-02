@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil | Jemputin</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="profil">
+  <main class="app">
+    <header class="top center" style="padding-bottom:64px">
+      <div class="logo" id="avatar" style="border-radius:50%;width:76px;height:76px;line-height:76px;font-size:26px">?</div>
+      <h1 id="pName"></h1>
+      <p id="pMail"></p>
+    </header>
+
+    <section class="card up">
+      <div class="stats">
+        <div><b id="stTrips">0</b><span class="sub">Perjalanan selesai</span></div>
+        <div><b id="stRating">-</b><span class="sub" id="stRatingLbl">Rating</span></div>
+      </div>
+    </section>
+
+    <div class="h">Data Diri</div>
+    <form class="card" id="profForm" novalidate>
+      <div class="f"><label for="nama">NAMA</label><input id="nama"><div class="msg"></div></div>
+      <div class="f"><label for="hp">NOMOR HP</label><input id="hp" inputmode="numeric"><div class="msg"></div></div>
+      <button type="submit" class="btn in" style="margin-top:0">Simpan Perubahan</button>
+    </form>
+
+    <div class="h">Ganti Kata Sandi</div>
+    <form class="card" id="pwForm" novalidate>
+      <div class="f"><label for="pwOld">KATA SANDI LAMA</label><input id="pwOld" type="password"><div class="msg"></div></div>
+      <div class="f"><label for="pwNew">KATA SANDI BARU</label><input id="pwNew" type="password"><div class="msg"></div></div>
+      <div class="f"><label for="pwConf">ULANGI KATA SANDI BARU</label><input id="pwConf" type="password"><div class="msg"></div></div>
+      <button type="submit" class="btn in" style="margin-top:0">Ganti Kata Sandi</button>
+    </form>
+
+    <button type="button" class="btn danger" id="logoutBtn" style="margin-bottom:10px">Keluar</button>
+    <button type="button" class="btn o" id="resetBtn">Reset Data Demo</button>
+
+    <nav class="nav" id="nav"></nav>
+  </main>
+  <script src="js/script.js" defer></script>
+</body>
+</html>

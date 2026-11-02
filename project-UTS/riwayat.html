@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Riwayat Pesanan | Jemputin</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="riwayat">
+  <main class="app">
+    <div class="top-bar"><h1>Riwayat Pesanan</h1></div>
+
+    <div class="chips" id="fStatus">
+      <button type="button" class="chip on" data-v="Semua">Semua</button>
+      <button type="button" class="chip" data-v="Aktif">Aktif</button>
+      <button type="button" class="chip" data-v="Selesai">Selesai</button>
+      <button type="button" class="chip" data-v="Dibatalkan">Dibatalkan</button>
+    </div>
+    <div class="chips" id="fSvc" style="padding-top:0;padding-bottom:12px">
+      <button type="button" class="chip on" data-v="Semua">Semua layanan</button>
+      <button type="button" class="chip" data-v="Motor">Motor</button>
+      <button type="button" class="chip" data-v="Mobil">Mobil</button>
+    </div>
+
+    <section class="card" id="list"></section>
+
+    <nav class="nav" id="nav"></nav>
+  </main>
+  <script src="js/script.js" defer></script>
+</body>
+</html>

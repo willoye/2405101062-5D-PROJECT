@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Pengemudi | Jemputin</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="driver">
+  <main class="app">
+    <header class="top" style="padding-bottom:70px">
+      <div class="row between">
+        <div>
+          <p>Dashboard Pengemudi</p>
+          <h1 id="dName">...</h1>
+        </div>
+        <div class="row">
+          <span id="onlineLbl" style="font-weight:700;font-size:12px">Offline</span>
+          <label class="switch" aria-label="Status online">
+            <input type="checkbox" id="onlineToggle"><span></span>
+          </label>
+        </div>
+      </div>
+    </header>
+
+    <section class="card up">
+      <div class="stats">
+        <div><b id="stToday">0</b><span class="sub">Pesanan hari ini</span></div>
+        <div><b id="stIncome">Rp0</b><span class="sub">Pendapatan</span></div>
+        <div><b id="stRate">5.0</b><span class="sub">Rating</span></div>
+      </div>
+    </section>
+
+    <div class="h" id="incomingTitle">Pesanan Masuk</div>
+    <div id="incoming"></div>
+
+    <div class="h">Perjalanan Terakhir</div>
+    <section class="card" id="history"></section>
+
+    <nav class="nav" id="nav"></nav>
+  </main>
+  <script src="js/script.js" defer></script>
+</body>
+</html>

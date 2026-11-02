@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Admin | Jemputin</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="admin-body" data-page="admin">
+  <div class="adm">
+    <aside class="adm-side">
+      <span class="brand">JEMPUTIN</span>
+      <span class="sub">Panel Admin</span>
+      <a href="#dashboard" id="nav-dashboard">Dashboard</a>
+      <a href="#pengguna" id="nav-pengguna">Pengguna</a>
+      <a href="#pesanan" id="nav-pesanan">Pesanan</a>
+      <a href="#tarif" id="nav-tarif">Tarif</a>
+      <button type="button" id="logoutBtn">Keluar</button>
+    </aside>
+
+    <main class="adm-main">
+      <!-- Dashboard -->
+      <section id="tab-dashboard">
+        <h1>Dashboard Admin</h1>
+        <div id="waitInfo"></div>
+        <div class="grid4" id="statBox"></div>
+        <div class="card">
+          <b style="display:block;margin-bottom:10px">Pesanan Terbaru</b>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>ID</th><th>Pelanggan</th><th>Pengemudi</th><th>Rute</th><th>Tarif</th><th>Status</th></tr></thead>
+              <tbody id="recentOrders"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pengguna -->
+      <section id="tab-pengguna" hidden>
+        <h1>Kelola Pengguna</h1>
+        <div class="toolbar">
+          <input id="uSearch" placeholder="Cari nama atau email...">
+          <select id="uRole"><option value="">Semua peran</option><option value="pelanggan">Pelanggan</option><option value="pengemudi">Pengemudi</option><option value="admin">Admin</option></select>
+          <button type="button" class="btn sm" id="addUser">+ Tambah Pengguna</button>
+        </div>
+        <div class="card"><div class="table-wrap">
+          <table>
+            <thead><tr><th>ID</th><th>Nama</th><th>HP</th><th>Peran</th><th>Status</th><th>Aksi</th></tr></thead>
+            <tbody id="userRows"></tbody>
+          </table>
+        </div></div>
+      </section>
+
+      <!-- Pesanan -->
+      <section id="tab-pesanan" hidden>
+        <h1>Kelola Pesanan</h1>
+        <div class="toolbar">
+          <select id="oStatus">
+            <option value="">Semua status</option>
+            <option>Mencari pengemudi</option><option>Pengemudi menuju lokasi</option><option>Dalam perjalanan</option><option>Selesai</option><option>Dibatalkan</option>
+          </select>
+        </div>
+        <div class="card"><div class="table-wrap">
+          <table>
+            <thead><tr><th>ID</th><th>Pelanggan</th><th>Pengemudi</th><th>Rute</th><th>Layanan</th><th>Tarif</th><th>Status</th><th>Aksi</th></tr></thead>
+            <tbody id="orderRows"></tbody>
+          </table>
+        </div></div>
+      </section>
+
+      <!-- Tarif -->
+      <section id="tab-tarif" hidden>
+        <h1>Atur Tarif</h1>
+        <div class="tarif-form" id="tarifForm"></div>
+        <div class="toolbar" style="margin-top:16px"><button type="button" class="btn sm" id="saveTarif">Simpan Tarif</button></div>
+        <p class="sub">Rumus: tarif = tarif dasar + (tarif per km x jarak), dibulatkan ke Rp500.</p>
+      </section>
+    </main>
+  </div>
+  <script src="js/script.js" defer></script>
+</body>
+</html>

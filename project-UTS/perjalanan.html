@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Status Perjalanan | Jemputin</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="perjalanan">
+  <main class="app no-nav">
+    <div class="map lg flat" id="map"></div>
+
+    <section class="card" id="driverCard"></section>
+
+    <section class="card">
+      <div class="row between" style="margin-bottom:6px">
+        <b>Status Perjalanan</b>
+        <span class="badge" id="statusBadge"></span>
+      </div>
+      <div id="steps"></div>
+    </section>
+
+    <button type="button" class="btn danger" id="cancelBtn" hidden style="margin-bottom:10px">Batalkan Pesanan</button>
+    <button type="button" class="btn o" id="nextBtn">Simulasikan status berikutnya (demo)</button>
+    <p class="sub center pad mt">Status biasanya diperbarui oleh pengemudi lewat driver.html. Tombol di atas hanya untuk demo tanpa tab kedua.</p>
+  </main>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+  <script src="js/script.js" defer></script>
+</body>
+</html>

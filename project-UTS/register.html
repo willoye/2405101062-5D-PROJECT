@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daftar | Jemputin</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="register">
+  <main class="app no-nav">
+    <header class="top" style="padding-top:44px;padding-bottom:80px">
+      <h1 style="font-size:22px">Buat Akun Baru</h1>
+      <p>Daftar untuk mulai memakai Jemputin</p>
+    </header>
+
+    <form class="card up" id="regForm" novalidate style="padding:20px">
+      <div class="alert" id="alertBox" hidden></div>
+      <div class="f"><label for="nama">NAMA LENGKAP</label><input id="nama" autocomplete="name"><div class="msg"></div></div>
+      <div class="f"><label for="email">EMAIL</label><input id="email" type="email" autocomplete="email"><div class="msg"></div></div>
+      <div class="f"><label for="hp">NOMOR HP</label><input id="hp" inputmode="numeric" placeholder="081234567890"><div class="msg"></div></div>
+      <div class="f"><label for="password">KATA SANDI</label><input id="password" type="password" autocomplete="new-password" placeholder="Minimal 6 karakter"><div class="msg"></div></div>
+      <!-- Admin tidak bisa mendaftar lewat form ini; akun admin dibuat langsung oleh sistem/admin -->
+      <div class="f">
+        <label for="role">DAFTAR SEBAGAI</label>
+        <select id="role">
+          <option value="pelanggan">Pelanggan</option>
+          <option value="pengemudi">Pengemudi</option>
+        </select>
+      </div>
+      <div id="driverFields" hidden>
+        <div class="f"><label for="jenis">JENIS KENDARAAN</label>
+          <select id="jenis"><option value="motor">Motor</option><option value="mobil">Mobil</option></select></div>
+        <div class="f"><label for="kendaraan">TIPE KENDARAAN</label><input id="kendaraan" placeholder="Contoh: Honda Beat"><div class="msg"></div></div>
+        <div class="f"><label for="plat">PLAT NOMOR</label><input id="plat" placeholder="AB 1234 CD"><div class="msg"></div></div>
+        <p class="sub" style="margin-bottom:12px">Akun pengemudi aktif setelah disetujui admin.</p>
+      </div>
+      <button type="submit" class="btn in">Daftar</button>
+      <p class="sub center mt">Sudah punya akun? <a href="login.html" style="color:var(--b);font-weight:700">Masuk</a></p>
+    </form>
+  </main>
+  <script src="js/script.js" defer></script>
+</body>
+</html>
